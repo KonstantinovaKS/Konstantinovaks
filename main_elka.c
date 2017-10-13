@@ -13,7 +13,7 @@ int main()
 
       printf("\n enter floors" , size);
       scanf("%d" , &size);
-	for (i=0 , play = size, stars = -1; i <= size; i++, stars +=2,play--) {
+    for (i=0 , play = size, stars = -1; i <= size; i++, stars +=2,play--) {
     for (j = 0; j < play; j++){
       printf(" ");
     }
@@ -22,15 +22,15 @@ int main()
       printf("*");
     }
       printf(" \n");
-	}
+    }
 
-	for (i = 0;i < size - 1; i++){
+    for (i = 0;i < size - 1; i++){
       printf(" ");
-	}
+    }
 
-	  printf("*\n");
+      printf("*\n");
 
-	return 0;
+      return 0;
 }
 
 
