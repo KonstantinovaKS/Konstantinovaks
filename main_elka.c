@@ -3,30 +3,32 @@
 
 int main()
 {
+    int i;
+	int j;
+	int size=0;
+	int k;
+	int stars;
+	int play;
 
-	int i;
-	int j = 0;
-	int size;
-	printf("Vvedite kolichestvo : \n");
-	scanf("%d" , &size);
-	 for (i = 1; i <= size; i++)
-	{
-		float ofsset = (float)(size - i) / 2;
-		int koof = round(ofsset);
-		do
-		{
-				if ((koof > 0 && j <= ofsset || j > size - ofsset) || (koof == 0 && (j < ofsset || j >= size - ofsset)))
-					printf("%c", ' ');
-				else
-					printf("%c", '*');
 
-			j++;
-		} while (j != size);
+      printf("\n enter floors" , size);
+      scanf("%d" , &size);
+	for (i=0 , play = size, stars = -1; i <= size; i++, stars +=2,play--) {
+    for (j = 0; j < play; j++){
+      printf(" ");
+    }
 
-		 j= 0;
-		printf("%c", '\n');
+    for (k = 1;k < stars; k++){
+      printf("*");
+    }
+      printf(" \n");
 	}
-	printf("%c", '*');
+
+	for (i = 0;i < size - 1; i++){
+      printf(" ");
+	}
+
+	  printf("*\n");
 
 	return 0;
 }
