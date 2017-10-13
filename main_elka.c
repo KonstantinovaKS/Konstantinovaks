@@ -4,11 +4,11 @@
 int main()
 {
     int i;
-	int j;
-	int size=0;
-	int k;
-	int stars;
-	int play;
+    int j;
+    int size=0;
+    int k;
+    int stars;
+    int play;
 
 
       printf("\n enter floors" , size);
