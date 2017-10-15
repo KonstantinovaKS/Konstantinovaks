@@ -2,7 +2,9 @@
 #include <stdlib.h>
 
 int main()
+
 {
+
     int i;
 	int j;
 	int size=0;

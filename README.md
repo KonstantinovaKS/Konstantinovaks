@@ -1,2 +1,0 @@
-# Konstantinovaks
-1

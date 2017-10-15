@@ -8,6 +8,8 @@ int searchNum=0;
 int enterNum=0;
 char selector;
 int i;
+int ok;
+
 
 for(;;)
 {
@@ -15,37 +17,44 @@ for(;;)
     searchNum=rand() % 10;
 
     for (i=0; i<3 ;i++)
-    {       // printf("");
+    {
         for(;;)
         {
             printf(" \n Enter positive value :");
-            scanf("%d", &enterNum);
-
-            if ((enterNum>='A' && enterNum <='Z')  || (enterNum>= 'a' && enterNum <= 'z')){
-                printf("simvol ne podhodit" );
-                continue;
-            }
-
-            if (enterNum < 0)
+            ok=0;
+            for (;;)
             {
-                printf("Its negative :");
-                continue ;
-            }
-       // break;
-
-            if (enterNum == searchNum){
-                printf("You winner!!!");
+                ok = scanf("%d", &enterNum);
+                fflush(stdin);
+                if (ok == 0)
+                {
+                    printf("I't not number!");
+                    continue;
+                }
                 break;
             }
-
-            if (enterNum < searchNum){
-                printf("Dobavte");
+            if (enterNum < 0)
+            {
+                printf("Its negative \n");
+                continue ;
             }
+            break;
+        }
 
-            if (searchNum < enterNum){
-                printf("Menshe");
-            }
-       // }
+        if (enterNum == searchNum)
+        {
+            printf("You winner!!!\n");
+            break;
+        }
+        if (enterNum < searchNum)
+        {
+            printf("give me a more\n");
+        }
+
+        if (searchNum < enterNum)
+        {
+            printf("just litle\n");
+        }
     }
 
     printf("\n Contine or exit ?  Y/N \n");
@@ -56,8 +65,8 @@ for(;;)
            break;
     }
 
-return 0;
-    }
+    return 0;
+
 
     return 0;
     }
