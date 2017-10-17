@@ -59,10 +59,11 @@ for(;;)
 
     printf("\n Contine or exit ?  Y/N \n");
     scanf("%c", &selector);
-    selector=getchar();
 
-    if ((selector=='N')||(selector=='n')){
-           break;
+
+    if ((selector=='Y')||(selector=='y')){
+           continue;
+
     }
 
     return 0;
@@ -71,6 +72,6 @@ for(;;)
     return 0;
     }
 
- // return 0;
+
 }
 
