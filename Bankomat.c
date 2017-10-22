@@ -9,10 +9,8 @@ int main()
 
 int isAdmin=0;
 int isLoggedIn=0;
-
-int ball=5000;
+int ball=0;
 int cash=0;
-
 int pinkodArray[5000];
 int ballance[5000];
 int n;
