@@ -20,6 +20,7 @@ for(;;)
     {
         for(;;)
         {
+ //Enter value
             printf(" \n Enter positive value :");
             ok=0;
             for (;;)
@@ -40,7 +41,7 @@ for(;;)
             }
             break;
         }
-
+//Search number
         if (enterNum == searchNum)
         {
             printf("You winner!!!\n");
@@ -60,7 +61,7 @@ for(;;)
     printf("\n Contine or exit ?  Y/N \n");
     scanf("%c", &selector);
 
-
+//conyinue or exit
     if ((selector=='Y')||(selector=='y')){
            continue;
 

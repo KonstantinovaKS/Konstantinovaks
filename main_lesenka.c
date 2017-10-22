@@ -14,7 +14,9 @@ int main ()
              for (k = 0; k < i; k++)
               {
    printf("%c", '*');
-}  printf("%c", '\n'); }
+              }
+   printf("%c", '\n');
+        }
 return 0;
 }
 
