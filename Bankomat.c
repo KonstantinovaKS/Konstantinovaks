@@ -31,30 +31,28 @@ int lenghtArray = FIFTY;
 
 
 /*/initializatin  pinkod*/
-    for ( i = 0; i < lenghtArray; i++)
-    {
+    for ( i = 0; i < lenghtArray; i++){
+
         pinCodArray [i] = 0;
 
-    }
+        }
 
+    for ( i = 0; i < lenghtArray; i++){
 
-
-    for ( i = 0; i < lenghtArray; i++)
-    {
         randPin = rand()% FIFTY;
         pinCodArray[i] = THOUSAND+ randPin;
-    }
+        }
 //initializatinn ballance
-     for (i = 0; i< lenghtArray; i++ )
-     {
-         ballance [i] = 0;
-     }
+     for (i = 0; i< lenghtArray; i++ ){
 
-     for(i = 0;i< lenghtArray; i++)
-     {
+         ballance [i] = 0;
+        }
+
+     for(i = 0;i< lenghtArray; i++){
+
         randPin = rand()% FIFTY;
         ballance[i] = THOUSAND+ randPin;
-     }
+        }
 
 // Enter pinkod
    for (i=0; i< 3 ; i++) {
@@ -74,7 +72,7 @@ int lenghtArray = FIFTY;
                 ball = j;
 
                 break;
-            }else if ( pinCode == pinAdmin){
+            } else if ( pinCode == pinAdmin){
                 printf("Hello Admin\n");
                 isAdmin = 1;
                // isLoggedIn=1;
@@ -111,8 +109,8 @@ int lenghtArray = FIFTY;
        	  }
             }
 // Menu for admin
-        if (isAdmin == 1)
-            {
+        if (isAdmin == 1){
+
          printf("1: Do you want to NULL?\n");
        	 printf("2: Look all  pins\n");
 
