@@ -5,8 +5,8 @@
 #define THOUSAND 1000
 #define HUNDRED 100
 
-void sort (char abc[], int counter[]);
-void input(char arraySymbol[],char abc[], int counter[]);
+int sort (char *abc, int *counter,char *arraySymbol);
+int input(char *arraySymbol,char *abc, int *counter);
 int main(){
 
 char arraySymbol[HUNDRED];
@@ -30,7 +30,17 @@ arraySymbol[i] = tolower (arraySymbol[i]);
 }
 
 //Input letter
-void input(char arraySymbol[],char abc[], int counter[]);{
+input(arraySymbol,abc, counter);
+
+//sort
+sort (abc,counter,arraySymbol);
+
+return 0 ;
+
+
+}
+ input(char *arraySymbol,char *abc, int *counter) {
+     int i,j;
 for (i = 0; i < strlen(abc); i++){
    for (j = 0; j < strlen(arraySymbol); j++){
       if (arraySymbol[j] == abc[i]){
@@ -39,8 +49,7 @@ for (i = 0; i < strlen(abc); i++){
        }
      }
 }
-//sort
-void sort (char abc[], int counter[]);{
+ sort (char *abc, int *counter,char *arraySymbol){
     int i, j;
 for (i = strlen(arraySymbol); i > 0; i--){
      for( j= 0; j < THOUSAND; j++){
@@ -49,11 +58,6 @@ for (i = strlen(arraySymbol); i > 0; i--){
             }
          }
      }
-}
-
-return 0 ;
-
-
 }
 
             //  }
