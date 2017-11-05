@@ -6,13 +6,12 @@
 #define HUNDRED 100
 
 void sort (char abc[], int counter[]);
-
+void input(char arraySymbol[],char abc[], int counter[]);
 int main(){
 
 char arraySymbol[HUNDRED];
 int counter[THOUSAND];
 char abc[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-
 int i;
 int j;
 
@@ -31,6 +30,7 @@ arraySymbol[i] = tolower (arraySymbol[i]);
 }
 
 //Input letter
+void input(char arraySymbol[],char abc[], int counter[]);{
 for (i = 0; i < strlen(abc); i++){
    for (j = 0; j < strlen(arraySymbol); j++){
       if (arraySymbol[j] == abc[i]){
@@ -38,6 +38,7 @@ for (i = 0; i < strlen(abc); i++){
          }
        }
      }
+}
 //sort
 void sort (char abc[], int counter[]);{
     int i, j;
