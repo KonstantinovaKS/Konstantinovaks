@@ -6,7 +6,7 @@
 #define HUNDRED 100
 
 int sort (char *abc, int *counter,char *arraySymbol);
-int input(char *arraySymbol,char *abc, int *counter);
+int input(char *abc, int *counter,char *arraySymbol);
 int main(){
 
 char arraySymbol[HUNDRED];
@@ -21,7 +21,7 @@ for(i = 0 ; i < THOUSAND; i ++){
 }
 
 printf("Enter string: ");
-scanf("%s", arraySymbol);
+gets( arraySymbol);
 
 
 //to lower
@@ -39,7 +39,7 @@ return 0 ;
 
 
 }
- input(char *arraySymbol,char *abc, int *counter) {
+int input(char *arraySymbol,char *abc, int *counter) {
      int i,j;
 for (i = 0; i < strlen(abc); i++){
    for (j = 0; j < strlen(arraySymbol); j++){

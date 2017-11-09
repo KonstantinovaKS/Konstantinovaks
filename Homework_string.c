@@ -2,26 +2,26 @@
 #include <stdlib.h>
 #include<string.h>
 #include<ctype.h>
-#define THOUSAND 1000
-#define HUNDRED 100
+
 
 
 int main(){
-
-char arraySymbol[HUNDRED];
-int counter[THOUSAND];
+const int ALL_NUMBER_LETTER = 1000;
+//char arraySymbol[ALL_NUMBER_LETTER];
+int counter[ALL_NUMBER_LETTER];
+const int ARRAY_SIZE;
 char abc[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 
 int i;
 int j;
-
+char* arraySymbol = malloc(sizeof(char) * ARRAY_SIZE);
 //initialization counter 0
-for(i = 0 ; i < THOUSAND; i ++){
+for(i = 0 ; i < ALL_NUMBER_LETTER; i ++){
     counter[i] = 0;
 }
 
 printf("Enter string: ");
-scanf("%s", arraySymbol);
+gets( arraySymbol);
 
 
 //to lower
@@ -37,15 +37,15 @@ for (i = 0; i < strlen(abc); i++){
          }
        }
      }
-//sort
+//Output count
 for (i = strlen(arraySymbol); i > 0; i--){
-     for( j= 0; j < THOUSAND; j++){
+     for( j= 0; j < ALL_NUMBER_LETTER; j++){
           if (counter[j] == i){
           printf("%d  %c\n", counter[j] , abc[j]);
             }
          }
      }
-
+free(arraySymbol);
 return 0 ;
 
 
