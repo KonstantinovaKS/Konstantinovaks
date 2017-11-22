@@ -90,17 +90,17 @@ private:
     int choice;
     void userChoise(){
         cin>>choice;
-     switch(choice){
+    switch(choice){
      case 1:
          Z.addAnimal();
 
         break;
-       case 2:
+      case 2:
             Z.showAnimal();
         break;
-       case 3:
+      case 3:
         Z.deleteAnimal();
-     break;
+        break;
      }
 
     }
