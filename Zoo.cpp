@@ -31,11 +31,6 @@ class Animal{
         cout<<"Add how mutch pasw"<<endl;
         cin>>paswNum;
 
-
-
-
-
-
     }
 
     void animalGetAnimal(){
