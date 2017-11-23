@@ -22,7 +22,6 @@ class Animal{
     void setAnimal(){
         helth = 1+ rand() %100;
 
-
         cout<< " Add age"<<endl;
         cin>>age;
         cout<<"Add name" <<endl;
@@ -30,13 +29,7 @@ class Animal{
         getline(cin, name);
         cout<<"Add how mutch pasw"<<endl;
         cin>>paswNum;
-
-
-
-
-
-
-    }
+   }
 
     void animalGetAnimal(){
         cout<<"Age is:"<< age <<endl;
@@ -99,13 +92,13 @@ private:
      case 1:
          Z.addAnimal();
 
-        break;
-       case 2:
+    break;
+    case 2:
             Z.showAnimal();
-        break;
-       case 3:
+    break;
+    case 3:
         Z.deleteAnimal();
-     break;
+    break;
      }
 
     }
@@ -119,7 +112,7 @@ public:
             cout<<"1: add animal"<<endl;
             cout<<"2: see animal"<<endl;
             cout<<"3: delete animal"<<endl;
-            cout<<"4: exit"<<endl;
+
             userChoise();
         }
     }
