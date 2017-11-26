@@ -11,7 +11,7 @@ class Animal{
     int age;
     string name;
     int paswNum;
-    int helth = 1+rand()%100;
+    int helth;
     bool in = true;
 
     public:
@@ -20,6 +20,7 @@ class Animal{
     name = "0";
     }
     void setAnimal(){
+        helth = 1+ rand() %100;
 
         cout<< " Add age"<<endl;
         cin>>age;
@@ -28,8 +29,12 @@ class Animal{
         getline(cin, name);
         cout<<"Add how mutch pasw"<<endl;
         cin>>paswNum;
+<<<<<<< HEAD
+   }
+=======
 
     }
+>>>>>>> c3f91e33165e8c0ab4b6f0b32129d25763d1752a
 
     void animalGetAnimal(){
         cout<<"Age is:"<< age <<endl;
@@ -49,7 +54,6 @@ class Zoo{
     public:
             Zoo(){
         m_size = 0;
-        int n = 0;
     }
       void showAnimal(){
           for(int i = 0; i < m_size; i++){
@@ -87,40 +91,44 @@ class Manager{
 private:
     Zoo Z;
     int choice;
-    int exit;
-    int userChoise(){
+    void userChoise(){
         cin>>choice;
-     switch(choice){
+    switch(choice){
      case 1:
          Z.addAnimal();
 
+<<<<<<< HEAD
+    break;
+    case 2:
+            Z.showAnimal();
+    break;
+    case 3:
+        Z.deleteAnimal();
+    break;
+=======
         break;
-       case 2:
+      case 2:
             Z.showAnimal();
         break;
-       case 3:
+      case 3:
         Z.deleteAnimal();
-       break;
+        break;
+>>>>>>> c3f91e33165e8c0ab4b6f0b32129d25763d1752a
+     }
 
-       case 4:
-      return 0;
-       break;
     }
-    }
+
 public:
     Manager(){
-    exit = 9;
+
     };
     void show(){
-        for(int i = 0;i < 3; i++){
+        for(;;){
             cout<<"1: add animal"<<endl;
             cout<<"2: see animal"<<endl;
             cout<<"3: delete animal"<<endl;
-            cout<<"4: exit"<<endl;
-            exit = userChoise();
-            if(exit == 0){
-                break;
-            }
+
+            userChoise();
         }
     }
 };
