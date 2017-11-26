@@ -52,33 +52,28 @@ public:
        allocatedSize = currentSize;
     }
 
-  void remove (int index){
-
-
-         if (currentSize == 0) {
+    void remove (int index){
+        if (currentSize == 0) {
            cout<<"Not found element form delete";
            return;
         }
-
-            if (index == currentSize) {
+        if (index == currentSize) {
             currentSize--;
             return;
         }
-
-            currentSize--;
+        currentSize--;
         for (int i=index-1; i<currentSize; i++) {
             array[i] = array[i+1];
         }
-
     }
     void add(int n, int index){
-     if (index <= currentSize){
-        if(currentSize +1 == allocatedSize){
-            int* newArray = new int[allocatedSize *2];
-            allocatedSize*=2;
-            fillNewArray(newArray);
-            delete array;
-            array = newArray;
+        if (index <= currentSize){
+            if(currentSize +1 == allocatedSize){
+                int* newArray = new int[allocatedSize *2];
+                allocatedSize*=2;
+                fillNewArray(newArray);
+                delete array;
+                array = newArray;
         }
         for (int i = currentSize; i > index; i--){
             array[i] = array[i-1];
@@ -87,10 +82,8 @@ public:
         currentSize++;
      }
         if (index > currentSize){
-        cout<<"Index not current"<<endl;
-
-    }
-
+            cout<<"Index not current"<<endl;
+        }
     }
 
     int get(int index) {
