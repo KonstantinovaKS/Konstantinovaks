@@ -11,7 +11,7 @@ class Animal{
     int age;
     string name;
     int paswNum;
-    int helth;
+    int helth = 1+rand()%100;
     bool in = true;
 
     public:
@@ -20,8 +20,6 @@ class Animal{
     name = "0";
     }
     void setAnimal(){
-        helth = 1+ rand() %100;
-
 
         cout<< " Add age"<<endl;
         cin>>age;
@@ -102,11 +100,11 @@ private:
         break;
        case 3:
         Z.deleteAnimal();
-     break;
+       break;
 
        case 4:
-        return 0;
-        break;
+      return 0;
+       break;
     }
     }
 public:
