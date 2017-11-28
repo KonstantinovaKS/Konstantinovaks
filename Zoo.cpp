@@ -9,7 +9,7 @@ using namespace std;
 class Animal{
     private:
     int age;
-    string name;
+    char name[26];
     int paswNum;
     int helth = 1+rand()%100;
     bool in = true;
@@ -17,21 +17,22 @@ class Animal{
     public:
     Animal(){
     age = 0;
-    name = "0";
-    }
+        }
     void setAnimal(){
+      for(int i=0;  i< '\0'; i++){
+       name[i]=0;
+   }
 
         cout<< " Add age"<<endl;
         cin>>age;
         cout<<"Add name" <<endl;
-        getline(cin, name);
-        getline(cin, name);
+        cin>>name;
         cout<<"Add how mutch pasw"<<endl;
         cin>>paswNum;
 
     }
 
-    void animalGetAnimal(){
+    void animalshowAnimal(){
         cout<<"Age is:"<< age <<endl;
         cout<<"Name animal:"<< name <<endl;
         cout<<"Paswnum :"<<paswNum<<endl;
@@ -43,40 +44,40 @@ class Animal{
 class Zoo{
 
     private:
-    Animal m_a[20];
-    int m_size ;
+    Animal a[20];
+    int size ;
 
     public:
             Zoo(){
-        m_size = 0;
+        size = 0;
         int n = 0;
     }
       void showAnimal(){
-          for(int i = 0; i < m_size; i++){
-            m_a[i].animalGetAnimal();
+          for(int i = 0; i < size; i++){
+            a[i].animalshowAnimal();
           }
         }
       void addAnimal(){
-        m_a[m_size].setAnimal();
-        m_size++;
+        a[size].setAnimal();
+        size++;
       }
       void deleteAnimal(){
-         for(int i = 0; i < m_size; i++){
-            m_a[i].animalGetAnimal();
+         for(int i = 0; i < size; i++){
+            a[i].animalshowAnimal();
           }
          int kill;
          cin>>kill;
           Animal A[20];
           int index = 0;
-      for( int i = 0 ; i< m_size;i++){
+      for( int i = 0 ; i< size;i++){
         if(i!= kill){
-            A[index] = m_a[i];
+            A[index] = a[i];
           index++;
        }
       }
-      m_size--;
-      for(int i = 0 ;i < m_size; i++){
-        m_a[i] = A[20];
+      size--;
+      for(int i = 0 ;i < size; i++){
+        a[i] = A[20];
       }
 
       }
@@ -112,7 +113,7 @@ public:
     exit = 9;
     };
     void show(){
-        for(int i = 0;i < 3; i++){
+        for(int i = 0;i < 20; i++){
             cout<<"1: add animal"<<endl;
             cout<<"2: see animal"<<endl;
             cout<<"3: delete animal"<<endl;

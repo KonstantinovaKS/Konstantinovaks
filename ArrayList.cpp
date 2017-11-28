@@ -108,7 +108,7 @@ int main(){
         list-> add(i);
     }
     list->print();
-    list->remove(4);
+    list->remove(5);
     list->print();
     list->add(110,11);
     list->print();
